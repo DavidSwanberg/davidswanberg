@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import useHoverImage from "@/Components/hooks/useHoverImage";
+import useHoverImage from "@/hooks/use-hover-image";
 
 export default function Link({ href, hoverImg, children }) {
   const [isHovered, setIsHovered] = useState(false);

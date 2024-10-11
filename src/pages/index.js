@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import Head from "next/head";
-import Accordion from "@/Components/accordion";
+import Accordion from "@/components/accordion";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import FadeIn from "@/Components/fadein";
-import Link from "@/Components/link";
-import NavLink from "@/Components/navlink";
+import FadeIn from "@/components/fade-in";
+import Link from "@/components/link";
+import NavLink from "@/components/navlink";
 
 gsap.registerPlugin(ScrollTrigger);
 

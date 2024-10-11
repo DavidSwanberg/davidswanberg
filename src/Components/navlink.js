@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import useHoverImage from "./hooks/useHoverImage";
+import useHoverImage from "@/hooks/use-hover-image";
 
 export default function NavLink({ id, hoverItem, itemIsText=false, children }) {
   const [isHovered, setIsHovered] = useState(false);

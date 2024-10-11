@@ -1,7 +1,6 @@
 import gsap from 'gsap';
-import { useState, useEfect, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { PiPlusThin, PiMinusThin } from "react-icons/pi";
-import FadeIn from './fadein';
 
 const AccordionItem = ({ title, subtitle, children }) => {
     const ref = useRef(null);
