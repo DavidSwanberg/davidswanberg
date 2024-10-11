@@ -59,13 +59,15 @@ export default function Home() {
           </nav>
         </div>
         <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col pb-6 lg:pb-20 h-[100dvh] justify-end">
+          <div className="h-[100vh]">
+            <div className="flex flex-col pb-6 lg:pb-20 h-[100dvh] justify-end mb-auto">
               <FadeIn>
                 <div className="text-4xl lg:text-7xl mr-auto">David Swanberg is a front-end web developer focused on creating visually compelling and intuitive digital experiences. He has helped brands across various industries bring their ideas to life online.</div>
               </FadeIn>
             </div>
+          </div>
           <FadeIn>
-          <div id="about" className="pb-36 pt-[120px] lg:pt-[64px] max-w-[1400px] mx-auto scroll-mt-[88px]">
+          <div id="about" className="py-[64px] lg:pb-36  max-w-[1400px] mx-auto scroll-mt-[88px]">
             <div className="text-xl lg:text-3xl max-w-[900px]">David currently works as Creative Technologist at Athletics, a brand studio in Brooklyn NY. With several years of digital agency experience, he has had the privilege of working with clients such as Amazon, Maker&apos;s Mark, Texas Roadhouse, Turf, Guild, and the New Museum.</div>
             <div className="pt-10 flex gap-8"> 
               <Link href="https://github.com/davidswanberg" hoverImg="/mac2.jpg" >Github</Link>
