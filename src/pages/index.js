@@ -6,6 +6,7 @@ import Accordion from "../components/accordion";
 import FadeIn from "../components/fade-in";
 import Link from "../components/link";
 import NavLink from "../components/navlink";
+import Cta from "../components/cta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +17,7 @@ export default function Home() {
   useEffect(() => {
       const trigger = ScrollTrigger.create({
         trigger: ref.current,
-        start: 'top 200px',
+        start: 'top center',
         end: 'bottom',
         scrub: true,
         onEnter: () => setColorToggle(true),
@@ -32,10 +33,7 @@ export default function Home() {
       return () => trigger.kill();
   }, [ref]);
 
-
-  const getColorClasses = () => colorToggle ? 
-  `dark-color-theme font-[400] antialiased transition-all duration-300 holla-normal min-h-[100vh] px-4`
-  : `light-color-theme text-[#1D1D1D] font-[400] antialiased transition-all duration-300 holla-normal min-h-[100vh] px-4`;
+  const getColorClasses = () => colorToggle ? 'dark-color-theme' : 'light-color-theme';
 
   return (
     <>
@@ -61,14 +59,14 @@ export default function Home() {
           </nav>
         </div>
         <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col pb-6 lg:pb-20 h-[100vh] justify-end">
+            <div className="flex flex-col pb-6 lg:pb-20 h-[100dvh] justify-end">
               <FadeIn>
-                <div className="text-4xl lg:text-7xl mr-auto">David Swanberg is a front-end web developer. With a focus on blending clean design and cutting-edge technology, he has helped brands across various industries bring their ideas to life online.</div>
+                <div className="text-4xl lg:text-7xl mr-auto">David Swanberg is a front-end web developer focused on creating visually compelling and intuitive digital experiences. He has helped brands across various industries bring their ideas to life online.</div>
               </FadeIn>
             </div>
           <FadeIn>
           <div id="about" className="pb-36 pt-[120px] lg:pt-[64px] max-w-[1400px] mx-auto">
-            <div className="text-xl lg:text-3xl max-w-[900px]">David currently works as Creative Technologist at Athletics, a creative studio in Brooklyn NY. With several years of digital agency experience, he has had the privelege of working with notable clients such as <span className="italic">(1)Amazon Design Community (2)Makers Mark (3)Texas Roadhouse (4)Turf.design (5)Guild Education (6)The New York Review of Books and (7)KY Fish and Wildlife</span></div>
+            <div className="text-xl lg:text-3xl max-w-[900px]">David currently works as Creative Technologist at Athletics, a brand studio in Brooklyn NY. With several years of digital agency experience, he has had the privilege of working with clients such as Amazon, Maker&apos;s Mark, Texas Roadhouse, Turf, Guild, and the New Museum.</div>
             <div className="pt-10 flex gap-8"> 
               <Link href="https://github.com/davidswanberg" hoverImg="/mac2.jpg" >Github</Link>
               <Link href="https://www.linkedin.com/in/david-swanberg/" hoverImg="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDk2dnA3Zzg3MGt0bW80d3hnanVnbWUxNTExaDNmbHh6N2wyNHBsMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pHb82xtBPfqEg/giphy.gif">LinkedIn</Link>
@@ -78,11 +76,15 @@ export default function Home() {
         </div>
         <div ref={ref}>
           <div id="work" className="max-w-[1400px] min-h-[50vh] mx-auto pb-36 scroll-mt-[144px]">
-            <h3 className="pb-4 font-sans">Selected Work</h3>
+            <h3 className="pb-4 font-sans">Select Work</h3>
             <Accordion />
           </div>
-          <div id="contact" className="max-w-[1400px] min-h-[50vh] mx-auto flex justify-center items-center pb-36">
-            <a href="mailto:davidswanberg767@gmail.com" className="pb-4 text-8xl">Get In Touch</a>
+          <div id="contact" className="max-w-[1400px] h-[50vh] mx-auto pb-36">
+            <Cta href="mailto:davidswanberg767@gmail.com" imgSrcs={[
+              'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWc3ZHlqMGFzcWZhZ3lrejYzZnVjOWFkbjYzZDUyNXR0aGFoMGRxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yNnVpD7C3X9djBK911/giphy.gif',
+              'https://i.chzbgr.com/full/8076783872/h082B6A0D/thats-one-big-paper-airplane',
+              'https://upload.wikimedia.org/wikipedia/commons/d/dc/Jersey_Telecom_switchboard_and_operator.jpg',
+              ]}><span className="text-8xl">Get In Touch</span></Cta>
           </div>
         </div>
       <footer className="w-full py-6 border-t footer-container">

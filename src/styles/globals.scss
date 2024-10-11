@@ -22,6 +22,10 @@ body {
   font-family: 'Holla Mediaeval', serif;
 }
 
+main {
+  @apply font-[400] antialiased lg:text-[18px] transition-colors duration-300 holla-normal min-h-[100vh] px-4;
+}
+
 .holla-bold {
   font-family: 'Holla Mediaeval Bold', serif;
 }
@@ -61,6 +65,15 @@ body {
   }
   .accordion-item, .footer-container {
     border-color: #FBF8F3;
+  }
+}
+
+.accordion-item{
+  ul {
+    @apply mb-4;
+  }
+  ul > li:before {
+    content: "- ";
   }
 }
 

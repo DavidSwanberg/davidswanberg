@@ -12,7 +12,7 @@ export default function Link({ href, hoverImg, children }) {
       <div className={isHovered ? 'opacity-0' : 'opacity-100'}>{children}</div>
       {isHovered && 
         <span ref={ref} className="absolute inset-0 z-[100]">
-          <img className="z-1 scale-[300%] w-auto" src={hoverImg} alt="arrow" />
+          <img className="z-1 scale-[300%] w-auto" src={hoverImg} alt="decorative hover image" />
         </span>
       }
     </a>

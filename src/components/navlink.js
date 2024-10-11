@@ -16,7 +16,7 @@ export default function NavLink({ id, hoverItem, itemIsText=false, children }) {
       <div className={isHovered ? 'opacity-0' : 'opacity-100'}>{children}</div>
       {isHovered && !itemIsText && 
         <span ref={ref} className="absolute inset-0 z-[100]">
-          <img className="z-1 scale-[300%] w-auto" src={hoverItem} alt="arrow" />
+          <img className="z-1 scale-[300%] w-auto" src={hoverItem} alt="decorative hover image" />
         </span>
       }
       {isHovered && itemIsText && <span className="absolute inset-0 z-[100]">{hoverItem}</span>}
