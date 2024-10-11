@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Holla Mediaeval', serif;
+}
+
+.holla-bold {
+  font-family: 'Holla Mediaeval Bold', serif;
+}
+
+.holla-normal {
+  font-family: 'Holla Mediaeval', serif;
+}
+
+.nav-container {
+  @apply w-screen flex items-center justify-end py-8 fixed top-0 left-0 right-0 transition-all duration-300;
+}
+
+.accordion-item {
+  @apply border-t;
+}
+
+.accordion-item:last-of-type {
+  @apply border-b;
+}
+
+.light-color-theme {
+@apply bg-[#FBF8F3] text-[#1D1D1D];
+
+  .nav-container {
+    @apply bg-gradient-to-b from-70% from-[#FBF8F3] text-[#1D1D1D]
+  }
+  .accordion-item, .footer-container {
+    border-color: #1D1D1D;
+  }
+}
+
+.dark-color-theme {
+  @apply bg-[blue] text-[#FBF8F3];
+
+  .nav-container {
+    @apply bg-gradient-to-b from-70% from-[#0000FF] text-[#FBF8F3]
+  }
+  .accordion-item, .footer-container {
+    border-color: #FBF8F3;
+  }
+}
+
+footer {
+  li {
+    @apply underline;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
