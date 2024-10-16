@@ -7,6 +7,7 @@ import FadeIn from "../components/fade-in";
 import Link from "../components/link";
 import NavLink from "../components/navlink";
 import Cta from "../components/cta";
+import { PiArrowUpRightLight } from "react-icons/pi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,15 +69,15 @@ export default function Home() {
           <div id="about" className="pb-24 lg:pt-6 lg:pb-36  max-w-[1400px] mx-auto scroll-mt-[88px]">
             <div className="text-xl lg:text-3xl max-w-[900px]">David currently works as Creative Technologist at Athletics, a brand studio in Brooklyn NY. With several years of digital agency experience, he has had the privilege of working with clients such as Amazon, Maker&apos;s Mark, Texas Roadhouse, Turf, Guild, and the New Museum.</div>
             <div className="pt-10 flex gap-8"> 
-              <Link href="https://github.com/davidswanberg" hoverImg="/mac2.jpg" >Github</Link>
-              <Link href="https://www.linkedin.com/in/david-swanberg/" hoverImg="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDk2dnA3Zzg3MGt0bW80d3hnanVnbWUxNTExaDNmbHh6N2wyNHBsMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pHb82xtBPfqEg/giphy.gif">LinkedIn</Link>
+              <Link href="https://github.com/davidswanberg" hoverImg="/mac2.jpg" >Github<PiArrowUpRightLight className="inline-block ml-[1px]" /></Link>
+              <Link href="https://www.linkedin.com/in/david-swanberg/" hoverImg="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDk2dnA3Zzg3MGt0bW80d3hnanVnbWUxNTExaDNmbHh6N2wyNHBsMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pHb82xtBPfqEg/giphy.gif">LinkedIn<PiArrowUpRightLight className="inline-block ml-[1px]" /></Link>
             </div>
           </div>
           </FadeIn>
         </div>
         <div ref={ref}>
           <div id="work" className="max-w-[1400px] min-h-[50vh] mx-auto pb-36 scroll-mt-[144px]">
-            <h3 className="pb-4 font-sans">Select Work</h3>
+            <h3 className="pb-4 font-sans">Recent Work</h3>
             <Accordion />
           </div>
           <div id="contact" className="max-w-[1400px] h-[50vh] mx-auto pb-36">
