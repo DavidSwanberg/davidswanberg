@@ -25,7 +25,7 @@ const FadeIn = ({ children }) => {
         start: 'top 80%',
       },
     });
-  }, [children, isLoaded]);
+  }, [isLoaded]);
     return <div className="w-full" ref={ref}>{children}</div>;
 };
 
