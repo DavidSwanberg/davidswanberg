@@ -6,7 +6,7 @@ const Accordion = () => {
         <ul className="flex flex-col">
         <AccordionItem
             title="Turf Rep Locator"
-            subtitle="A bespoke geolocation tool with a slick UI built with the mapbox api."
+            subtitle="A bespoke geolocation tool with a slick UI built with the mapbox api"
         >
             <h3 className="italic">Technologies Used</h3>
             <ul>
