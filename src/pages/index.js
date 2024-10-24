@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
       const trigger = ScrollTrigger.create({
         trigger: ref.current,
-        start: 'top center',
+        start: 'top bottom',
         end: 'bottom',
         scrub: true,
         onEnter: () => setColorToggle(true),
