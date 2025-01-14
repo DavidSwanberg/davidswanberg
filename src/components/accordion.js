@@ -33,7 +33,7 @@ const Accordion = () => {
             </ul>
             <AccordionLink href="https://turf.design/inspiration">Visit Project</AccordionLink>
         </AccordionItem>
-        <AccordionItem title="Guild" subtitle="New site build with Gutenberg blocks and unique scroll animations" year="2024">
+        <AccordionItem title="Guild" subtitle="Webby award winning new site built with Typescript and Wordpress" year="2024">
         <h3 className="italic">Technologies Used</h3>
             <ul>
                 <li>Typescript</li>
